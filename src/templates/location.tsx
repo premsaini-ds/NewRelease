@@ -57,10 +57,10 @@ export const config: TemplateConfig = {
       "geocodedCoordinate",
       "services",
       "photoGallery",
-      "dm_directoryParents.name",
-      "dm_directoryParents.slug",
-      "dm_directoryParents.meta",
-      "dm_directoryParents.c_addressRegionDisplayName",
+      // "dm_directoryParents.name",
+      // "dm_directoryParents.slug",
+      // "dm_directoryParents.meta",
+      // "dm_directoryParents.c_addressRegionDisplayName",
     ],
     // The entity language profiles that documents will be generated for.
     localization: {
@@ -80,11 +80,7 @@ export const config: TemplateConfig = {
  * and ensure that each entity has the slug field pouplated.
  */
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  return document.slug
-    ? document.slug
-    : `${document.locale}/${document.address.region}/${document.address.city}/${
-        document.address.line1
-      }-${document.id.toString()}`;
+  return document.slug ? document.slug : `${document.locale}/${document.address.region}/${document.address.city}/${document.address.line1}-${document.id.toString()}`;
 };
 
 /**
