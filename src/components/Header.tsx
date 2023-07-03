@@ -3,18 +3,26 @@ import Cta from "./Cta";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
+import Logo from "../assets/images/Logo.svg";
+
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "#" },
+  { name: "MOTORCYCLES", href: "/" },
+  { name: "SCOOTERS", href: "#" },
+  { name: "EXCHANGE", href: "#" },
+  { name: "SERVICES", href: "#" },
+  { name: "GOODLIFE", href: "#" },
+  { name: "COMPANY", href: "#" },
+ 
+
 ];
 
 const Header = () => {
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" className="bg-white shadow border-y-8 border-[#243c5a] ">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-24 justify-between">
+            <div className="flex h-15 justify-between">
               <div className="flex">
                 <div className="-ml-2 mr-2 flex items-center md:hidden">
                   {/* Mobile menu button */}
@@ -30,14 +38,14 @@ const Header = () => {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block lg:hidden"
-                    src="https://cdn.fs.brandfolder.com/cache=expiry:604800/deY3VGFpSjC761Abjbfc"
+                    src={Logo}
                     alt="Your Company"
-                    width="50"
-                    height="50"
+                    width="100"
+                    height="100"
                   />
                   <img
                     className="hidden lg:block"
-                    src="https://cdn.fs.brandfolder.com/cache=expiry:604800/deY3VGFpSjC761Abjbfc"
+                    src={Logo}
                     alt="Your Company"
                     width="50"
                     height="50"
@@ -56,9 +64,9 @@ const Header = () => {
               </div>
               <div className="flex items-center">
                 <Cta
-                  buttonText="Order Online"
+                  buttonText="Book Now"
                   url="#"
-                  style="text-white bg-orange shadow-md"
+                  style="text-white bg-[#f21826] shadow-md"
                 />
               </div>
             </div>

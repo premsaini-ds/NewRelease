@@ -13,7 +13,7 @@ const Cta = ({ buttonText, url, style }: CtaProps) => {
       <a
         href={url}
         className={twMerge(
-          "py-4 px-6 text-base font-bold rounded-lg hover:scale-[1.02] duration-250",
+          "py-4 px-6 text-black font-bold hover:scale-[1.02] duration-250",
           style
         )}
         target=""

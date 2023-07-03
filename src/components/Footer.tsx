@@ -6,6 +6,7 @@ import {
   Twitter,
   YouTube,
 } from "../assets/svgs/SocialIcons";
+import ChatBot from "./chatbot";
 
 export interface FooterProps {
   _site?: any;
@@ -139,9 +140,12 @@ const Footer = (props: FooterProps) => {
             </p>
           </div>
         </div>
+        <div className="chatBots">
+                        <ChatBot/>
+        </div>
       </footer>
     </>
-  );
+  );   
 };
 
 export default Footer;

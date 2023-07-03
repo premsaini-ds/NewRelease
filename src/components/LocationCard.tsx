@@ -25,7 +25,7 @@ const LocationCard: CardComponent<Location> = ({
             className="font-semibold text-orange"
             rel="noreferrer"
           >
-            {location.neighborhood}
+            {location.name}
           </a>
           <p className="text-sm">{location.address.line1}</p>
           <p className="text-sm">{`${location.address.city}, ${location.address.region} ${location.address.postalCode}`}</p>
