@@ -9,7 +9,7 @@ import "@yext/chat-ui-react/bundle.css";
 // sessionStorage.setItem('checkhead', "plop")
 const config: HeadlessConfig = {
   apiKey: "f12acfb7e58eab37b1f87c8aeae4d34a",
-  botId: "hero-chat-bot",
+  botId: "my-chat-bots",
   saveToSessionStorage: false,
   apiDomain: "sbx-cdn.yextapis.com",
 };
