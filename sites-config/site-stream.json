@@ -1,10 +1,10 @@
 {"$id": "site-entity",
 "filter": {
-    "entityIds": ["2418733735452027921"]
+    "entityIds": ["allglobaldata"]
 },
 "source": "knowledgeGraph",
 "fields": [
-            "c_headerSlider"
+            "c_headerSliderImages"
 ],
 "localization": {
   "locales": ["en"],

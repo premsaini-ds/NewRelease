@@ -59,7 +59,7 @@ const Locator: Template<TemplateRenderProps> = ({
   
   return (
     <PageLayout>
-      <PhotoSlider photoGallery={_site?.c_headerSlider}/>
+      <PhotoSlider photoGallery={_site?.c_headerSliderImages}/>
       <SearchHeadlessProvider searcher={searcher}>
        
           {/* <Moment format="DD MMM yyy"></Moment> */}
