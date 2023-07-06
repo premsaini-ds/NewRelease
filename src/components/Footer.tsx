@@ -118,7 +118,7 @@ const Footer = (props: FooterProps) => {
                   <h3 className="text-sm font-semibold leading-6 text-gray-900">
                     Legal
                   </h3>
-                  <ul role="list" className="mt-6 space-y-4">
+                  <ul role="list" className="mt-6 space-y-4 "> 
                     {navigation.legal.map((item) => (
                       <li key={item.name}>
                         <a
