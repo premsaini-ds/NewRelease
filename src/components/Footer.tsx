@@ -144,8 +144,10 @@ const Footer = (props: FooterProps) => {
                         <ChatBot/>
         </div>
       </footer>
-    </>
+    </>  
   );   
 };
 
 export default Footer;
+
+
