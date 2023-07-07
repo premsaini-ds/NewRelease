@@ -30,6 +30,11 @@ import Hours from "../components/Hours";
 import PageLayout from "../components/PageLayout";
 import EditTool from "../components/EditTool";
 import BreadCrumbs from "../components/Breadcrumbs";
+import { LexicalRichText,Markdown } from "@yext/react-components";
+
+
+
+
 
 /**
  * Required when Knowledge Graph data is used for a template.
@@ -57,6 +62,9 @@ export const config: TemplateConfig = {
       "geocodedCoordinate",
       "services",
       "photoGallery",
+      "c_extraDescriptionRichTextV2",
+      "c_extraDescriptionMarkdown",
+      "c_computedFieldData",
       // "dm_directoryParents.name",
       // "dm_directoryParents.slug",
       // "dm_directoryParents.meta",
@@ -169,6 +177,11 @@ const Location: Template<TemplateRenderProps> = ({
     description,
     siteDomain,
     dm_directoryParents,
+    c_extraDescriptionRichTextV2,
+    c_extraDescriptionMarkdown,
+    c_computedFieldData,
+
+
   } = document;
 
   return (
@@ -184,6 +197,24 @@ const Location: Template<TemplateRenderProps> = ({
             <Details address={address} phone={mainPhone} services={services} />
             {hours && <Hours title={"Restaurant Hours"} hours={hours} />}
             {description && <About name={name} description={description} />}
+          </div>
+        </div>
+        <div className="centered-container">
+          <div className="grid gap-x-10 gap-y-10 md:grid-cols-2">
+            <div className="richtextv2">
+              <h2 className="text-xl font-semibold mb-4">Rich Text V2</h2>
+              <LexicalRichText serializedAST={JSON.stringify(c_extraDescriptionRichTextV2.json)} />
+            </div>
+             <div className="Markdown">
+                <h2 className="text-xl font-semibold mb-4">Markdown</h2>
+                <Markdown content={c_extraDescriptionMarkdown.markdown} />
+             </div>
+          </div>
+          <div className="centered-container">
+            <div className="text-center">
+                   <h2 className="text-xl font-semibold mb-4">Computed Field Data</h2>
+                  <p>{c_computedFieldData}</p>
+            </div>
           </div>
         </div>
       </PageLayout>
