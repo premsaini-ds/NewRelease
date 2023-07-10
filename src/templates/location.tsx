@@ -169,6 +169,7 @@ const Location: Template<TemplateRenderProps> = ({
   document,
 }) => {
   const {
+    _site,
     name,
     address,
     hours,
@@ -186,7 +187,7 @@ const Location: Template<TemplateRenderProps> = ({
 
   return (
     <>
-      <PageLayout>
+        <PageLayout _site={_site}>
         <Banner name={name} address={address} />
         <div className="centered-container">
           <BreadCrumbs

@@ -5,18 +5,30 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import Logo from "../assets/images/Logo.svg";
 
-const navigation = [
-  { name: "MOTORCYCLES", href: "/" },
-  { name: "SCOOTERS", href: "#" },
-  { name: "EXCHANGE", href: "#" },
-  { name: "SERVICES", href: "#" },
-  { name: "GOODLIFE", href: "#" },
-  { name: "COMPANY", href: "#" },
- 
+export interface HeaderProps {
+  _site: any;
+  headerData?: any;
+}
 
-];
 
-const Header = () => {
+// const navigation = [
+//   { name: "MOTORCYCLES", href: "/" },
+//   { name: "SCOOTERS", href: "#" },
+//   { name: "EXCHANGE", href: "#" },
+//   { name: "SERVICES", href: "#" },
+//   { name: "GOODLIFE", href: "#" },
+//   { name: "COMPANY", href: "#" },
+// ];
+
+
+
+
+const Header = (headerData: HeaderProps) => {
+
+  // console.log("headerdata",headerData?._site?.headerMenuLinks);
+  
+  const navigation = headerData?._site?.headerMenuLinks;
+
   return (
     <Disclosure as="nav" className="bg-white shadow border-y-8 border-[#243c5a] ">
       {({ open }) => (
@@ -52,11 +64,11 @@ const Header = () => {
                   />
                 </div>
                 <div className="hidden md:ml-6 md:flex md:space-x-4">
-                  {navigation.map((link) => (
+                  {navigation?.map((data:any,index:number) => (
                     <Cta
-                      key={link.href}
-                      buttonText={link.name}
-                      url={link.href}
+                      key={index}
+                      buttonText={data.label}
+                      url={data.link}
                       style="inline-flex items-center border-b-4 rounded-none border-transparent hover:border-orange"
                     />
                   ))}
@@ -68,20 +80,20 @@ const Header = () => {
                   url="#"
                   style="text-white bg-[#f21826] shadow-md"
                 />
-              </div>
+              </div> 
             </div>
           </div>
 
           <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 pt-2 pb-3">
-              {navigation.map((link) => (
+            {navigation?.map((data:any,index:number) => (
                 <Disclosure.Button
-                  key={link.href}
+                key={index}
                   as="a"
-                  href={link.href}
+                  href={data.link}
                   className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700 sm:pl-5 sm:pr-6"
                 >
-                  {link.name}
+                 {data.label}
                 </Disclosure.Button>
               ))}
             </div>

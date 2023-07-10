@@ -25,8 +25,6 @@ export const getPath: GetPath<TemplateProps> = () => {
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = () => {
-
-
   return {
     title: "Hero Showroom locations",
     charset: "UTF-8",
@@ -35,7 +33,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = () => {
 };
 
 const searcher = provideHeadless({
-  apiKey: "1d8ca6e0f97cb9c6297de6a5daff9b90",
+  apiKey: "5ecc488e505919f17978d7eaa85ab2cc",
   // make sure your experience key matches what you see in the platform
   experienceKey: "demonewrepoproject",
   locale: "en",
@@ -58,7 +56,7 @@ const Locator: Template<TemplateRenderProps> = ({
 
   
   return (
-    <PageLayout>
+    <PageLayout _site={_site}>
       <PhotoSlider photoGallery={_site?.c_headerSliderImages}/>
       <SearchHeadlessProvider searcher={searcher}>
        

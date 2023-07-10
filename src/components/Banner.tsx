@@ -25,7 +25,7 @@ const Banner = (props: BannerProps) => {
   return (
     <>
       <div
-        className={`relative z-10 w-full bg-cover bg-center h-96 bg-[url(/src/assets/images/tacos-1.avif)] `}
+        className={`relative z-10 w-full bg-cover bg-center h-96 bg-[url(https://pbs.twimg.com/media/FIaYRvwVkAYDWiw.jpg)] `}
       >
         <div className="absolute left-0 right-0 flex flex-col items-center">
           <div className="w-96 my-8 rounded-xl bg-amber-500 border-8 shadow-xl border-amber-600 px-4 py-2 text-center">
