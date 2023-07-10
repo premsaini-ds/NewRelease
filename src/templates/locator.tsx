@@ -1,6 +1,5 @@
 import * as React from "react";
 import "../index.css";
-import Moment from 'react-moment';
 import {
   GetHeadConfig,
   GetPath,
@@ -17,8 +16,6 @@ import {
 import { FilterSearch } from "@yext/search-ui-react";
 import StoreLocator from "../components/StoreLocator";
 import PhotoSlider from "../components/PhotoSlider";
-
-
 
 export const getPath: GetPath<TemplateProps> = () => {
   return `locator`;
@@ -40,11 +37,6 @@ const searcher = provideHeadless({
   endpoints: SandboxEndpoints,
   verticalKey: "locations",
 });
-
-const dateToFormat = '2023-05-17';
-
-
-// const staticBanner = {image:{ur:{Banner1}}}
 
 const Locator: Template<TemplateRenderProps> = ({
   path,

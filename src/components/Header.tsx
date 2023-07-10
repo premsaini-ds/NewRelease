@@ -11,24 +11,10 @@ export interface HeaderProps {
 }
 
 
-// const navigation = [
-//   { name: "MOTORCYCLES", href: "/" },
-//   { name: "SCOOTERS", href: "#" },
-//   { name: "EXCHANGE", href: "#" },
-//   { name: "SERVICES", href: "#" },
-//   { name: "GOODLIFE", href: "#" },
-//   { name: "COMPANY", href: "#" },
-// ];
-
-
-
-
 const Header = (headerData: HeaderProps) => {
-
-  // console.log("headerdata",headerData?._site?.headerMenuLinks);
   
   const navigation = headerData?._site?.headerMenuLinks;
-
+  
   return (
     <Disclosure as="nav" className="bg-white shadow border-y-8 border-[#243c5a] ">
       {({ open }) => (
